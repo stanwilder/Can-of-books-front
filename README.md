@@ -29,6 +29,11 @@ For each of the lab features, make an estimate of the time it will take you to c
 - Finish time: 6:20pm
 - Actual time needed to complete: Wrapped up lab 11 and spent ~ 3.5 hours on lab 12. Remaining work involves adding a delete button.
 
+ Name of feature: Lab 12 day 2
+- Estimate of time needed to complete: 4 hours
+- Start time: 1:30pm
+- Finish time: 3:30pm
+- Actual time needed to complete: Wrapped up the rest of lab 12 and spent ~ 2 hours on it.
 ## Credit and Collaborations
 In collaboration with [Stanley Wilder](https://github.com/stanwilder), [Elizabeth Hammes](https://github.com/ehammes)
 
