@@ -17,15 +17,17 @@ Javascript, Node.js, MongoDB, Mongoose, Axios
 ## Estimates
 For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-Name of feature: Can of books
+- Name of feature: Can of books
+- Estimate of time needed to complete: 5 hours. 
+- Start time: 2:30
+- Finish time: 7:00
+- Actual time needed to complete: 4 hours 30 minutes. additinal work left over.
 
-Estimate of time needed to complete: 5 hours. 
-
-Start time: 2:30
-
-Finish time: 7:00
-
-Actual time needed to complete: 4 hours 30 minutes. additinal work left over.
+- Name of feature: Lab 12
+- Estimate of time needed to complete: 4 hours
+- Start time: 2:53pm
+- Finish time: 6:20pm
+- Actual time needed to complete: Wrapped up lab 11 and spent ~ 3.5 hours on lab 12. Remaining work involves adding a delete button.
 
 ## Credit and Collaborations
 In collaboration with [Stanley Wilder](https://github.com/stanwilder), [Elizabeth Hammes](https://github.com/ehammes)
