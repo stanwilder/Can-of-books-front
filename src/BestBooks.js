@@ -3,6 +3,7 @@ import React from 'react';
 import BookFormModal from './BookFormModal'
 import './BestBooks.css'
 import { Carousel, Button } from 'react-bootstrap';
+import DeleteButton from './DeleteButton';
 
 class BestBooks extends React.Component {
   constructor(props) {
@@ -40,6 +41,19 @@ class BestBooks extends React.Component {
     }
   }
 
+  deleteBook = async (id) => {
+    try {
+      await axios.delete(`${process.env.REACT_APP_SERVER}/books/${id}`)
+      let updatedBooks = this.state.books.filter(book => book._id !== id)
+      console.log(id);
+      this.setState({
+        books: updatedBooks,
+      })
+    } catch (error) {
+      console.log('An error exists:', error.response.data)
+    }
+  }
+
   componentDidMount() {
     this.getBooks();
   }
@@ -55,7 +69,7 @@ class BestBooks extends React.Component {
     this.setState({
       isModalDisplaying: false
     });
-    console.log(this.state.isModalDisplaying)
+   
   };
 
   render() {
@@ -65,8 +79,12 @@ class BestBooks extends React.Component {
           className='d-block w-100 p-3'
           src='img/Books.jpeg'
           alt={book.title}
-        />
+          />
         <Carousel.Caption>
+          <DeleteButton 
+          deleteBook={this.deleteBook}
+          id={book._id}
+          />
           <div
             style={{ backgroundColor: 'teal', borderRadius: '5px', width: '80%', margin: 'auto', padding: '5px' }}>
             <h3>Book Title: {book.title}</h3>
