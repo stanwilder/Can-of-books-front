@@ -12,7 +12,6 @@ class UpdateBookForm extends React.Component {
       recommended: e.target.recommended.checked || this.props.recommended,
       _id: this.props.id,
     }
-    // console.log(bookToUpdate)
     this.props.updateBook(bookToUpdate)
     this.props.closeFormHandler();
   }
