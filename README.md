@@ -34,6 +34,13 @@ For each of the lab features, make an estimate of the time it will take you to c
 - Start time: 1:30pm
 - Finish time: 3:30pm
 - Actual time needed to complete: Wrapped up the rest of lab 12 and spent ~ 2 hours on it.
+
+Name of feature: Lab 13
+- Estimate of time needed to complete: 4 hours
+- Start time: 4:00pm
+- Finish time: pm
+- Actual time needed to complete:
+
 ## Credit and Collaborations
 In collaboration with [Stanley Wilder](https://github.com/stanwilder), [Elizabeth Hammes](https://github.com/ehammes)
 

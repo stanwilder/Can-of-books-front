@@ -12,6 +12,7 @@ handleBookSubmit = (e) => {
     recommended: e.target.recommended.checked,
   }
   this.props.postBooks(newBook);
+  this.props.closeModal();
 }
 
   render() {

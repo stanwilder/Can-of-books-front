@@ -2,8 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 
 
-class DeleteButton extends React.Component {
-
+class UpdateButton extends React.Component {
 
 
   render() {
@@ -11,13 +10,13 @@ class DeleteButton extends React.Component {
       <>
         <Button
           type="button"
-          onClick={() => this.props.deleteBook(this.props.id)}>
-          Delete Book
+          onClick={this.props.openFormClick}
+        >
+          Update Book
         </Button>
       </>
     )
   }
 }
 
-
-export default DeleteButton;
+export default UpdateButton;
