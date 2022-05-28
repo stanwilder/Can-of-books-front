@@ -33,10 +33,13 @@ class App extends React.Component {
               <h3>About</h3>
               <About />
             </Route>
+            <Route path="/profile">
+              <h3>Profile</h3>
+              <Profile />
+            </Route>
           </Switch>
           <Footer />
         </Router>
-        <Profile />
       </>
     )
   }

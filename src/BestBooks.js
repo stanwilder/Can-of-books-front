@@ -6,6 +6,7 @@ import { Carousel, Button } from 'react-bootstrap';
 import DeleteButton from './DeleteButton';
 import UpdateButton from './UpdateButton';
 import UpdateBookForm from './UpdateBookForm'
+import { withAuth0 } from "@auth0/auth0-react"
 
 class BestBooks extends React.Component {
   constructor(props) {
@@ -19,18 +20,23 @@ class BestBooks extends React.Component {
   }
 
   getBooks = async () => {
-    try {
-      let results = await axios.get(`${process.env.REACT_APP_SERVER}/books`)
-      this.setState({
-        books: results.data,
-        error: false,
-      })
-    } catch (error) {
-      this.setState({
-        error: true
-      })
+    if (this.props.auth0.isAuthenticated) {
+      const res = await this.props.auth0.getIdTokenClaims();
+      const jwt = res.__raw;
+      console.log(jwt);
+      try {
+        let results = await axios.get(`${process.env.REACT_APP_SERVER}/books`)
+        this.setState({
+          books: results.data,
+          error: false,
+        })
+      } catch (error) {
+        this.setState({
+          error: true
+        })
+      }
     }
-  }
+    }
 
   postBooks = async (newBook) => {
     try {
@@ -163,4 +169,4 @@ class BestBooks extends React.Component {
   }
 }
 
-export default BestBooks;
+export default withAuth0(BestBooks);
